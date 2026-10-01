@@ -1,0 +1,8 @@
+project_id = "gym-management-mvp"
+
+[auth.email]
+enable_confirmations = false
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
