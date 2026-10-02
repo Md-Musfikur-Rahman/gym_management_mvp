@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -260,7 +261,11 @@ export function SignUpForm() {
 
 export function SignInBrand() {
   return (
-    <div className="flex items-center gap-3">
+    <Link
+      aria-label="Northline home"
+      className="flex w-fit items-center gap-3 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest"
+      href="/"
+    >
       <span className="grid size-10 place-items-center rounded-md bg-citrus text-forest">
         <Activity aria-hidden="true" size={20} strokeWidth={2.5} />
       </span>
@@ -272,6 +277,6 @@ export function SignInBrand() {
           Club operations
         </span>
       </span>
-    </div>
+    </Link>
   );
 }
